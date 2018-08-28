@@ -1,0 +1,35 @@
+{
+  "name": "bitcdn-resize",
+  "version": "1.0.0",
+  "description": "bitcdn.host static image resizer",
+  "private": false,
+  "engines": {
+    "node": ">=8 <=10"
+  },
+  "main": "index.js",
+  "keywords": [
+    "bitcdn cdn static image resize"
+  ],
+  "author": "Uni Sayo <unibtc@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/uniibu/bitcdn-resize",
+  "bugs": {
+    "url": "https://github.com/uniibu/bitcdn-resize/issues"
+  },
+  "homepage": "https://github.com/uniibu/bitcdn-resize#readme",
+  "scripts": {
+    "test": "node test.js",
+    "start": "pm2 start ./index.js -i 2 --name bitcdnresize"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0"
+  },
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-bouncer": "^6.0.4",
+    "koa-req": "^2.1.0",
+    "koa-router": "^7.4.0",
+    "koa-send": "^5.0.0",
+    "sharp": "^0.20.7"
+  }
+}
