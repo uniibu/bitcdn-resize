@@ -4,19 +4,11 @@ const bouncer = require('koa-bouncer');
 const send = require('koa-send');
 const fs = require('fs');
 const path = require('path');
-const kreq = require('koa-req');
 const resize = require('./resizeImage');
 const app = new Koa();
 const router = new Router({ prefix: '/gallery' });
 app.port = 7559;
 app.proxy = true;
-kreq(app, {
-  cors: {
-    origin: '*',
-    allowMethods: ['GET', 'OPTIONS', 'HEAD'],
-    maxAge: 86400
-  }
-});
 app.use(bouncer.middleware());
 app.use(async (ctx, next) => {
   try {
