@@ -22,7 +22,7 @@
     "start": "pm2 start ./index.js -i 2 --name bitcdnresize"
   },
   "devDependencies": {
-    "eslint": "^5.1.0"
+    "eslint": "^6.4.0"
   },
   "dependencies": {
     "koa": "^2.5.2",
